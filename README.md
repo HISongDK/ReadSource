@@ -1,5 +1,9 @@
 # 源码共读活动
 
+## 笔记
+
+- [validate-npm-package-name 校验 npm 包名](./validate-npm-package-name/MEREAD.md))
+
 ## Question
 
 Git 仓库子文件夹同样为 Git 仓库时，会被当做 git 子模块，显示不正常。
