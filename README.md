@@ -2,7 +2,7 @@
 
 ## 笔记
 
-- [validate-npm-package-name 校验 npm 包名](./validate-npm-package-name/MEREAD.md))
+- [validate-npm-package-name 校验 npm 包名](./validate-npm-package-name/MEREAD.md)
 
 ## Question
 
