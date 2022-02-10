@@ -3,6 +3,7 @@
 ## 笔记
 
 - [validate-npm-package-name 校验 npm 包名](./validate-npm-package-name/MEREAD.md)
+- [axios/utils 判断数据类型的工具函数](./axios/MEREAD.md)
 
 ## Question
 
