@@ -28,10 +28,23 @@ InterceptorManager.prototype.use = function use(fulfilled, rejected, options) {
  * Remove an interceptor from the stack
  *
  * @param {Number} id The ID that was returned by `use`
+ *
+ * @returns {Boolean} `true` if the interceptor was removed, `false` otherwise
  */
 InterceptorManager.prototype.eject = function eject(id) {
   if (this.handlers[id]) {
     this.handlers[id] = null;
+  }
+};
+
+/**
+ * Clear all interceptors from the stack
+ *
+ * @returns {void}
+ */
+InterceptorManager.prototype.clear = function clear() {
+  if (this.handlers) {
+    this.handlers = [];
   }
 };
 
@@ -42,6 +55,8 @@ InterceptorManager.prototype.eject = function eject(id) {
  * interceptors that may have become `null` calling `eject`.
  *
  * @param {Function} fn The function to call for each interceptor
+ *
+ * @returns {void}
  */
 InterceptorManager.prototype.forEach = function forEach(fn) {
   utils.forEach(this.handlers, function forEachHandler(h) {

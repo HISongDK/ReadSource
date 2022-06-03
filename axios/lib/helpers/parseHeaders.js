@@ -22,6 +22,7 @@ var ignoreDuplicateOf = [
  * ```
  *
  * @param {String} headers Headers needing to be parsed
+ *
  * @returns {Object} Headers parsed into an object
  */
 module.exports = function parseHeaders(headers) {
@@ -34,8 +35,8 @@ module.exports = function parseHeaders(headers) {
 
   utils.forEach(headers.split('\n'), function parser(line) {
     i = line.indexOf(':');
-    key = utils.trim(line.substr(0, i)).toLowerCase();
-    val = utils.trim(line.substr(i + 1));
+    key = utils.trim(line.slice(0, i)).toLowerCase();
+    val = utils.trim(line.slice(i + 1));
 
     if (key) {
       if (parsed[key] && ignoreDuplicateOf.indexOf(key) >= 0) {
